@@ -1,0 +1,22 @@
+server:
+  port: 8080
+logging:
+  level:
+    ROOT: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file: ricardo.log
+management:
+  endpoints:
+    web:
+      exposure:
+        include: heapdump,liquibase,loggers,logfile,prometheus,threaddump,info,metrics,health,beans,features
+info:
+  app:
+    name: Spring Sample Application
+    description: This is my first spring boot application
+    version: 1.0.0
+
+welcome:
+  message: oi PRD
